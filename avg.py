@@ -12,7 +12,7 @@ credentials = {
             "client_secret": client_Secret,
             "refresh_token": refresh_Token,
             "use_proto_plus": False,
-            "login_customer_id": customer_Id
+            "login_customer_id": login_customer_Id
         }
 
 client = GoogleAdsClient.load_from_dict(credentials)
