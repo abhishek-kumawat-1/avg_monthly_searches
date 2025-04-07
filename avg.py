@@ -7,16 +7,16 @@ import secrets
 
 # Google Ads credentials
 credentials = {
-            "developer_token": developer_Token,
-            "client_id": client_Id,
-            "client_secret": client_Secret,
-            "refresh_token": refresh_Token,
+            "developer_token": st.secrets["developer_Token"],
+            "client_id": st.secrets["client_Id"],
+            "client_secret": st.secrets["client_Secret"],
+            "refresh_token": st.secrets["refresh_Token"],
             "use_proto_plus": False,
-            "login_customer_id": login_customer_Id
+            "login_customer_id": st.secrets["login_customer_Id"]
         }
 
 client = GoogleAdsClient.load_from_dict(credentials)
-customer_id=customer_Id
+customer_id=st.secrets["customer_Id"]
 
 # Keyword + geo configuration
 keyword_config = {
